@@ -1,0 +1,65 @@
+
+.text {
+
+  // Text size
+
+  &--size {
+    &--large {
+      font-size: 1.14rem;
+      line-height: 1.5;
+    }
+
+    &--small {
+      font-size: .88rem;
+      line-height: 1.33;
+    }
+    // ...
+  }
+
+  &--align {
+    &--center {
+      align-self: center;
+      text-align: center;
+    }
+  }
+
+  // Text weight
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--semi-bold {
+    font-weight: 600;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  // Text color
+
+  &--grey {
+    color: $text-grey;
+
+    &-dark {
+      color: $text-grey-dark;
+    }
+  }
+
+  &--red {
+    color: $text-error;
+  }
+
+  &--blue {
+    color: $text-blue;
+  }
+
+  &--transparent {
+    color: $text-transparent;
+  }
+}

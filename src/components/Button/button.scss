@@ -1,0 +1,55 @@
+@import '~bourbon/core/bourbon';
+@import '~assets/style/colors';
+@import '~sass-flex-mixin/flex';
+
+.button {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  background-color: transparent;
+  border-radius: 4px;
+  color: $text-white;
+  cursor: pointer;
+  transition-duration: 500ms;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--size {
+    &--default {
+      @include padding(6px 20px);
+    }
+    &--square {
+      @include padding(8px 8px);
+    }
+  }
+
+  &--stretch {
+    width: 100%;
+  }
+
+  &--color {
+    &--default {
+      background-color: $blue-sky;
+      color: $text-white;
+    }
+
+    &--auth {
+      background-color: $transparent-background;
+      color: $text-white;
+
+      &:hover {
+        background-color: $default-background;
+        color: $blue-sky;
+      }
+    }
+  }
+
+  &[disabled] {
+    background-color: $button-disabled;
+    color: $blue-sky;
+    cursor: default;
+  }
+  
+}

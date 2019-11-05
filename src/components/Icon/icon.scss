@@ -1,0 +1,24 @@
+@import '~bourbon/core/bourbon';
+@import '~assets/style/colors';
+@import '~sass-flex-mixin/flex';
+
+.icon {
+  @include flexbox();
+  fill: currentColor;
+  max-height: calc(1.429em);
+  stroke: currentColor;
+  vertical-align: middle;
+  width: calc(1.429em);
+
+  &__elem {
+    &--color {
+      &--red {
+        fill: $text-error;
+      }
+      &--blue {
+        fill: $blue-sky;
+        stroke: $blue-sky;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.menu {
+  width: 405px;
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+}

@@ -1,0 +1,25 @@
+.progress-bar {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  background-color: rgba(43, 102, 253, 0.1);
+  height: 4px;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.filler {
+  height: 100%;
+  border-radius: 0;
+  transition: width 1s ease-in-out;
+  background-color: #2B66FD;
+
+
+  &--purple {
+    background-color: #8F24FA;
+  }
+  &--orange {
+    background-color: #FF9111;
+  }
+}
+

@@ -1,0 +1,88 @@
+@import '~bourbon/core/bourbon';
+@import '~assets/style/colors';
+@import '~sass-flex-mixin/flex';
+
+.text {
+  // Headers
+  &--h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  &--h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+
+  &--h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  &--h4 {
+    // ...
+  }
+
+  &--h5 {
+    // ...
+  }
+
+  &--h6 {
+    // ...
+  }
+
+  // Text size
+  &--size {
+    &--large {
+      font-size: 1.14rem;
+      line-height: 1.5;
+    }
+
+    &--small {
+      font-size: .88rem;
+      line-height: 1.33;
+    }
+    // ...
+  }
+
+  &--align {
+    &--center {
+      text-align: center;
+      align-self: center;
+    }
+  }
+
+  // Text weight
+  &--weight {
+    &--light {
+      font-weight: 300;
+    }
+
+    &--medium {
+      font-weight: 500;
+    }
+
+    &--semi-bold {
+      font-weight: 600;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+  // Text color
+  &--color {
+    &--grey {
+      color: $text-grey;
+    }
+
+    &--red {
+      color: $text-error;
+    }
+
+    &--blue {
+      color: $blue-sky;
+    }
+  }
+}

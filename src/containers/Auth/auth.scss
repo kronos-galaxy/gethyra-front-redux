@@ -1,0 +1,26 @@
+@import '~bourbon/core/bourbon';
+@import '~assets/style/colors';
+@import '~sass-flex-mixin/flex';
+
+.auth {
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include margin(null auto);
+  @media screen and (max-width: 320px) {
+    @include flex(1 1);
+
+    width: 290px;
+  }
+  @media screen and (max-width: 366px){
+    width: 100%;
+  }
+
+  &__steps {
+    @include padding(5px null);
+  }
+
+  &__caption {
+    @include padding(10px null);
+  }
+}

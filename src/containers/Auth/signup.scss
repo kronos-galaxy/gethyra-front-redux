@@ -1,0 +1,61 @@
+@import '~bourbon/core/bourbon';
+@import '~assets/style/colors';
+@import '~sass-flex-mixin/flex';
+
+.signup {
+  @include justify-content(center);
+  @media screen and (max-height: 510px) {
+    margin-top: 48px;
+  }
+
+  &__step-1 {
+    @include margin(null auto);
+    @media screen and (max-width: 320px) {
+      @include margin(48px auto 0 auto);
+      width: 290px;
+    }
+
+    width: 366px;
+  }
+
+  &__step-2 {
+    @media screen and (max-width: 568px) {
+      @include margin(48px auto 0 auto);
+      width: 90%;
+    }
+
+    width: 568px;
+  }
+}
+
+.confirm {
+  @include flexbox;
+  @include flex-direction(row);
+  @include padding(15px null);
+
+  @media screen and (max-width: 568px) {
+    @include flex-direction(column);
+    @include padding(null 15px);
+
+    background-color: $default-background;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: $border-default;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+  }
+
+  &__item {
+    @include flex(1, 1);
+
+    &:first-child {
+      @include flexbox;
+      @include align-items(center);
+      @media screen and (max-width: 568px) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

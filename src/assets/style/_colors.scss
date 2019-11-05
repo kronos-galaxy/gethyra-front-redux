@@ -1,0 +1,25 @@
+$default-background: #fff;
+$transparent-background: rgba($default-background, .12);
+$main-background: #e5e5e5;
+$blue-sky: #2b66fd;
+
+// Error
+$error-main: #ff3232;
+$error-second: #ff2424;
+
+// Text
+$text-white: #fff;
+$text-grey: #80858d;
+$text-grey-dark: #697382;
+$text-blue: $blue-sky;
+$text-error: $error-second;
+$text-transparent: rgba($text-white, .75);
+
+// Button
+$button-disabled: #f0f2f5;
+ 
+// border
+$border-default: #e8ebf1;
+$border-active: #2360fe;
+$border-error: $error-main;
+$border-light-grey: #EDEEF4;

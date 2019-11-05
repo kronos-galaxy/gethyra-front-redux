@@ -1,0 +1,15 @@
+@import '~bourbon/core/bourbon';
+
+.link {
+  text-decoration: none;
+
+  &__underline {
+    @include border-style(null null solid);
+    @include border-width(null null 1px);
+    opacity: .12;
+
+    &--dashed {
+      @include border-style(null null dashed);
+    }
+  }
+}

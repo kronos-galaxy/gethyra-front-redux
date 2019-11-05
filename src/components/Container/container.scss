@@ -1,0 +1,98 @@
+@import '~bourbon/core/bourbon';
+@import '~assets/style/colors';
+@import '~sass-flex-mixin/flex';
+
+.container {
+  @include flexbox;
+  @include flex-direction(column);
+  background-color: inherit;
+
+  &--header {
+    @include padding(null 15px);
+    @include flex-direction;
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    box-sizing: border-box;
+    min-height: 48px;
+    min-width: 320px;
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+
+  &--page {
+    min-height: 100vh;
+    min-width: 320px;
+  }
+
+  &--main {
+    flex: 1 1;
+  }
+
+  &--footer {
+    @include border-style(solid null null null);
+    @include border-width(1px null null null);
+    @include flex-direction;
+    @include justify-content(space-between);
+    @include margin(null 15px);
+    @include padding(20px null null null);
+    @include size(auto, 80px);
+  }
+
+  &--content {
+    flex: 1 1;
+  }
+
+  &--align {
+    &--center {
+      @include justify-content(center);
+    }
+  }
+
+  &--color {
+    &--grey {
+      background-color: $main-background;
+    }
+
+    &--blue {
+      background-color: $blue-sky;
+      color: $text-white;
+    }
+  }
+
+  &--scrollarea {
+    @include flexbox;
+    @include flex-direction(column);
+    @include border-top-radius(4px);
+    @include border-bottom-radius(4px);
+
+    @media screen and (max-width: 568px) { // TODO: we shood use breakpoints;
+      @include border-bottom-radius(0);
+      @include border-top-radius(0);
+      @include border-style(solid hidden hidden hidden);
+      height: auto;
+      margin: 0 -15px 100px -15px;
+    }
+
+    border: 1px solid $border-default;
+    box-sizing: border-box;
+    height: 40vh;
+    overflow: auto;
+    padding: 28px 15px;
+
+    p {
+      margin: 1em 0;
+    }
+  }
+
+  &--menu {
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @media screen and (max-width: 568px) { // TODO: we shood use breakpoints;
+      display: none;
+    }
+
+    min-width: 405px;
+  }
+}

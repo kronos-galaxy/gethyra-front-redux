@@ -1,0 +1,111 @@
+@import '~sass-flex-mixin/flex';
+@import '~bourbon/core/bourbon';
+@import '~assets/style/colors';
+
+.input {
+  @include flexbox;
+  @include flex-direction(column);
+  @include padding(5px null);
+
+  &__caption {
+    @include padding(5px null);
+  }
+
+  &__label {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include padding(1px null);
+    line-height: 1.5;
+    font-weight: 500;
+
+    &__requared {
+      &::after {
+        color: $error-main;
+        content: '*';
+        padding-left: 1px;
+      }
+    }
+  }
+
+  &__container {
+    @media screen and (max-width: 778px) {
+      @include flex-direction(column);
+      @include align-items();
+      @include justify-content(space-around);
+    }
+
+    @include flexbox;
+    @include align-items(center);
+    @include flex-flow(row wrap);
+    position: relative;
+  }
+
+  &__field {
+    @include padding(7px);
+    border: 1px solid $border-default;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:focus {
+      border-color: $border-active;
+      outline: none;
+    }
+
+    &--error {
+      border-color: $border-error;
+    }
+
+    &:read-only {
+      border: 1px solid $border-default;
+      outline: none;
+    }
+  }
+
+  &__error {
+    @media screen and (max-width: 778px) {
+      @include margin(5px 0 0 0);
+      position: unset;
+      width: auto;
+    }
+
+    @include margin(0 0 0 5px);
+    left: 100%;
+    position: absolute;
+    width: 201px;
+  }
+
+  &__success {
+    &--label {
+      @media screen and (max-width: 450px) {
+        display: block;
+      }
+
+      align-self: end;
+      display: none;
+    }
+
+    &--input {
+      @media screen and (max-width: 450px) {
+        display: none;
+      }
+
+      @include justify-content(space-around);
+      @include margin(0 0 0 5px);
+
+      left: 100%;
+      position: absolute;
+    }
+  }
+
+  &__eye {
+    cursor: pointer;
+    font-size: 15px;
+    padding: 8px 7px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

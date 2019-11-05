@@ -1,0 +1,14 @@
+@import '~bourbon/core/bourbon';
+
+.signin {
+  @include margin(null auto);
+  @media screen and (max-width: 320px) {
+    width: 290px;
+  }
+
+  width: 366px;
+
+  &__rsp-link {
+    @include margin(30px null null null); 
+  }
+}

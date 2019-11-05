@@ -1,0 +1,11 @@
+@import '~bourbon/core/bourbon';
+@import './fonts';
+@import './colors';
+@import '~assets/style/reset';
+@import '~sass-flex-mixin/flex';
+
+html {
+  font: 14px/1.429 'IBM Plex Sans', 'Open Sans', consolas;
+}
+
+@import './text';

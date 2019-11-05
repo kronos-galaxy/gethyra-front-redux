@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "airbnb",
+    "react-app",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:lodash/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:promise/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": { "paths": ["src"] },
+      "babel-module": {}
+    }
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel",
+    "jsx-a11y",
+    "jest",
+    "lodash",
+    "optimize-regex",
+    "promise"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "jsx-a11y/href-no-hash": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/anchor-has-content": 0,
+    "jsx-a11y/aria-props": 0,
+    "jsx-a11y/aria-role": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/interactive-supports-focus": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/role-has-required-aria-props": 0,
+    "linebreak-style": 0,
+    "react/prefer-stateless-function": 0,
+    "no-console": "off",
+    "optimize-regex/optimize-regex": "warn",
+    "import/prefer-default-export": 0,
+    "jsx-a11y/no-autofocus": 0
+  },
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  }
+}
